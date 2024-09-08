@@ -1,0 +1,17 @@
+{
+  "name": "@inkibra/tauri-plugin-sharing",
+  "version": "0.1.0",
+  "author": "You",
+  "description": "",
+  "type": "module",
+  "main": "./build/index.js",
+  "types": "./index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run clean && npx tsc"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.0.0-rc.0"
+  }
+}

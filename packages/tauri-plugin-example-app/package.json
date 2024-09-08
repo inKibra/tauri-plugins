@@ -1,0 +1,23 @@
+{
+  "name": "@inkibra/tauri-plugin-example-app",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "dev": "tauri ios dev --no-dev-server-wait",
+    "open:ios-project": "open ./src-tauri/gen/apple/app.xcodeproj/",
+    "open:ios-build": "open ./src-tauri/gen/apple/build/arm64/",
+    "clean": "rm -rf ./.parcel-cache && rm -rf dist && rm -rf src-tauri/target && rm -rf build",
+    "tauri": "tauri",
+    "build": "npx parcel build index.html --no-cache --no-autoinstall --cache-dir ./.parcel-cache --no-optimize",
+    "build:ios": "TAURI_KEY_PASSWORD=\"\" tauri ios build",
+    "build:ios-dev": "TAURI_KEY_PASSWORD=\"\" tauri ios build --debug",
+    "prepublishOnly": "npm run clean && npx tsc"
+  },
+  "dependencies": {
+    "@inkibra/tauri-plugin-sharing": "^0.1.0",
+    "@tauri-apps/api": "^2.0.0-rc.0",
+    "@tauri-apps/plugin-log": "^2.0.0-rc.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
