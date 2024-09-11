@@ -10,6 +10,8 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![greet])
         .plugin(tauri_plugin_log::Builder::new().build())
         .plugin(tauri_plugin_sharing::init())
+        .plugin(tauri_plugin_context_menu::init())
+        .plugin(tauri_plugin_map_display::init())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -14,6 +14,8 @@
     "prepublishOnly": "npm run clean && npx tsc"
   },
   "dependencies": {
+    "@inkibra/tauri-plugin-context-menu": "^0.1.0",
+    "@inkibra/tauri-plugin-map-display": "^0.1.0",
     "@inkibra/tauri-plugin-sharing": "^0.1.0",
     "@tauri-apps/api": "^2.0.0-rc.0",
     "@tauri-apps/plugin-log": "^2.0.0-rc.1"

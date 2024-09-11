@@ -7,6 +7,8 @@
   ],
   "permissions": [
     "core:default",
-    "sharing:default"
+    "sharing:default",
+    "context-menu:default",
+    "map-display:default"
   ]
 }
