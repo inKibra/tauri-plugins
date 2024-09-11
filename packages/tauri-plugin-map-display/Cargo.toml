@@ -1,0 +1,17 @@
+[package]
+name = "tauri-plugin-map-display"
+version = "0.1.0"
+authors = [ "You" ]
+description = ""
+edition = "2021"
+rust-version = "1.71"
+exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
+links = "tauri-plugin-map-display"
+
+[dependencies]
+tauri = { version = "2.0.0-rc.10" }
+serde = "1.0"
+thiserror = "1.0"
+
+[build-dependencies]
+tauri-plugin = { version = "2.0.0-rc.9", features = ["build"] }
