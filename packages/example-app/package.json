@@ -1,6 +1,7 @@
 {
   "name": "@inkibra/tauri-plugin-example-app",
   "version": "0.0.1",
+  "private": true,
   "description": "",
   "scripts": {
     "dev": "tauri ios dev --no-dev-server-wait",

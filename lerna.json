@@ -1,0 +1,15 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "packages": [
+    "packages/inkibra/*"
+  ],
+  "command": {
+    "version": {
+      "allowBranch": "release"
+    },
+    "publish": {
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
+}

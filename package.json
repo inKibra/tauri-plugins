@@ -4,16 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "release": "git checkout -B release && git push --force --set-upstream origin release && npx lerna publish && git checkout develop && git rebase release && git push"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@tauri-apps/cli": "^2.0.0-rc.11",
-    "parcel": "^2.12.0",
-    "typescript": "^5.5.4",
     "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.0.4"
+    "@types/react-dom": "^18.0.4",
+    "lerna": "^8.1.8",
+    "parcel": "^2.12.0",
+    "typescript": "^5.5.4"
   },
   "workspaces": [
     "packages/*"
