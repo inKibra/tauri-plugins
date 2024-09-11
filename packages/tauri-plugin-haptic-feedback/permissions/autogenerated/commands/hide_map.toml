@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-hide-map"
+description = "Enables the hide_map command without any pre-configured scope."
+commands.allow = ["hide_map"]
+
+[[permission]]
+identifier = "deny-hide-map"
+description = "Denies the hide_map command without any pre-configured scope."
+commands.deny = ["hide_map"]

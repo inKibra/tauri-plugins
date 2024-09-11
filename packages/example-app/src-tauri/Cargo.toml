@@ -24,4 +24,5 @@ tauri = { version = "2.0.0-rc.10", features = [] }
 tauri-plugin-sharing = { path = "../../tauri-plugin-sharing" }
 tauri-plugin-context-menu = { path = "../../tauri-plugin-context-menu" }
 tauri-plugin-map-display = { path = "../../tauri-plugin-map-display" }
+tauri-plugin-haptic-feedback = { path = "../../tauri-plugin-haptic-feedback" }
 tauri-plugin-log = "2.0.0-beta.0"

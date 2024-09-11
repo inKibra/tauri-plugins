@@ -9,6 +9,7 @@
     "core:default",
     "sharing:default",
     "context-menu:default",
-    "map-display:default"
+    "map-display:default",
+    "haptic-feedback:default"
   ]
 }

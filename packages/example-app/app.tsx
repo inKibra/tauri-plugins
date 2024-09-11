@@ -6,6 +6,8 @@ import { attachConsole } from '@tauri-apps/plugin-log';
 // import { ping, share } from '@inkibra/tauri-plugin-sharing';
 import { showContextMenu } from '@inkibra/tauri-plugin-context-menu';
 import { showMap } from '@inkibra/tauri-plugin-map-display';
+import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
+
 
 
 
@@ -41,6 +43,10 @@ function render() {
         });
         console.log('showMapResponse', showMapResponse);
       }}>Show Map</button>
+      <button onClick={async () => {
+        const impactFeedbackResponse = await impactFeedback('heavy');
+        console.log('impactFeedbackResponse', impactFeedbackResponse);
+      }}>Impact Feedback</button>
     </React.StrictMode>,
   );
 }

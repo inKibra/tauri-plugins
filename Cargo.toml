@@ -1,8 +1,9 @@
 [workspace]
 resolver = "2"
 members = [
-    "packages/tauri-plugin-example-app/src-tauri",
+    "packages/example-app/src-tauri",
     "packages/tauri-plugin-sharing",
     "packages/tauri-plugin-context-menu",
     "packages/tauri-plugin-map-display",
+    "packages/tauri-plugin-haptic-feedback",
 ]
