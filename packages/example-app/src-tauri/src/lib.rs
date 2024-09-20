@@ -13,6 +13,7 @@ pub fn run() {
         .plugin(tauri_plugin_context_menu::init())
         .plugin(tauri_plugin_map_display::init())
         .plugin(tauri_plugin_haptic_feedback::init())
+        .plugin(tauri_plugin_geolocation::init())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

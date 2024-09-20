@@ -7,7 +7,7 @@ import { attachConsole } from '@tauri-apps/plugin-log';
 import { showContextMenu } from '@inkibra/tauri-plugin-context-menu';
 import { showMap } from '@inkibra/tauri-plugin-map-display';
 import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
-
+import { requestPermissions, checkPermissions, watchPosition, getCurrentPosition } from '@inkibra/tauri-plugin-geolocation';
 
 
 
@@ -47,6 +47,24 @@ function render() {
         const impactFeedbackResponse = await impactFeedback('heavy');
         console.log('impactFeedbackResponse', impactFeedbackResponse);
       }}>Impact Feedback</button>
+      <button onClick={async () => {
+        let permissionsStatus = await checkPermissions();
+        if (permissionsStatus.location !== 'granted') {
+          permissionsStatus = await requestPermissions(['location'], true);
+        }
+        if (permissionsStatus.location === 'denied') {
+          console.log('Location permission denied');
+          return;
+        }
+        const currentPosition = await getCurrentPosition();
+        console.log('currentPosition', currentPosition);
+      }}>Get Current Position</button>
+      <button onClick={async () => {
+        const watchId = await watchPosition({enableHighAccuracy: true, timeout: 10000, maximumAge: 10000}, (position) => {
+          console.log('position', position);
+        });
+        console.log('watchId', watchId);
+      }}>Watch Position</button>
     </React.StrictMode>,
   );
 }
