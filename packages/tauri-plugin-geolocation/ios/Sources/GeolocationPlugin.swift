@@ -14,6 +14,7 @@ class GetPositionArgs: Decodable {
 
 class WatchPositionArgs: Decodable {
   let options: GetPositionArgs
+  let request_updates_in_background: Bool
   let channel: Channel
 }
 
@@ -72,6 +73,8 @@ class GeolocationPlugin: Plugin, CLLocationManagerDelegate {
   @objc public func watchPosition(_ invoke: Invoke) throws {
     let args = try invoke.parseArgs(WatchPositionArgs.self)
 
+    self.backgroundUpdatesRequested = args.request_updates_in_background;
+    
     self.watcherChannels.append(args.channel)
 
     DispatchQueue.main.async {

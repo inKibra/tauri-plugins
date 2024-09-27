@@ -18,9 +18,10 @@ pub(crate) async fn get_current_position<R: Runtime>(
 pub(crate) async fn watch_position<R: Runtime>(
     app: AppHandle<R>,
     options: PositionOptions,
+    request_updates_in_background: bool,
     channel: Channel,
 ) -> Result<()> {
-    app.geolocation().watch_position_inner(options, channel)
+    app.geolocation().watch_position_inner(options, request_updates_in_background, channel)
 }
 
 #[command]

@@ -60,7 +60,7 @@ function render() {
         console.log('currentPosition', currentPosition);
       }}>Get Current Position</button>
       <button onClick={async () => {
-        const watchId = await watchPosition({enableHighAccuracy: true, timeout: 10000, maximumAge: 10000}, (position) => {
+        const watchId = await watchPosition({enableHighAccuracy: true, timeout: 10000, maximumAge: 10000, requestUpdatesInBackground: true}, (position) => {
           console.log('position', position);
         });
         console.log('watchId', watchId);

@@ -93,7 +93,7 @@ export type PositionOptions = {
 }
 
 export async function watchPosition(
-  options: PositionOptions,
+  options: PositionOptions & {requestUpdatesInBackground?: boolean},
   cb: (location: Position | null, error?: string) => void
 ): Promise<number> {
   const channel = new Channel<Position | string>()
@@ -106,6 +106,7 @@ export async function watchPosition(
   }
   await invoke('plugin:geolocation|watch_position', {
     options,
+    requestUpdatesInBackground: options.requestUpdatesInBackground ?? false,
     channel
   })
   return channel.id
