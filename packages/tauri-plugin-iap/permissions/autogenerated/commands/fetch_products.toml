@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-fetch-products"
+description = "Enables the fetch_products command without any pre-configured scope."
+commands.allow = ["fetch_products"]
+
+[[permission]]
+identifier = "deny-fetch-products"
+description = "Denies the fetch_products command without any pre-configured scope."
+commands.deny = ["fetch_products"]

@@ -107,6 +107,7 @@ dependencies = [
  "tauri-plugin-context-menu",
  "tauri-plugin-geolocation",
  "tauri-plugin-haptic-feedback",
+ "tauri-plugin-iap",
  "tauri-plugin-log",
  "tauri-plugin-map-display",
  "tauri-plugin-sharing",
@@ -3495,6 +3496,16 @@ dependencies = [
 
 [[package]]
 name = "tauri-plugin-haptic-feedback"
+version = "0.1.0"
+dependencies = [
+ "serde",
+ "tauri",
+ "tauri-plugin",
+ "thiserror",
+]
+
+[[package]]
+name = "tauri-plugin-iap"
 version = "0.1.0"
 dependencies = [
  "serde",

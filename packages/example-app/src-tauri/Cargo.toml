@@ -26,4 +26,5 @@ tauri-plugin-context-menu = { path = "../../tauri-plugin-context-menu" }
 tauri-plugin-map-display = { path = "../../tauri-plugin-map-display" }
 tauri-plugin-haptic-feedback = { path = "../../tauri-plugin-haptic-feedback" }
 tauri-plugin-geolocation = { path = "../../tauri-plugin-geolocation" }
+tauri-plugin-iap = { path = "../../tauri-plugin-iap" }
 tauri-plugin-log = "2.0.0-beta.0"

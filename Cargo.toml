@@ -7,4 +7,5 @@ members = [
     "packages/tauri-plugin-map-display",
     "packages/tauri-plugin-haptic-feedback",
     "packages/tauri-plugin-geolocation",
+    "packages/tauri-plugin-iap"
 ]

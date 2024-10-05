@@ -1,0 +1,13 @@
+# Automatically generated - DO NOT EDIT!
+
+"$schema" = "../../schemas/schema.json"
+
+[[permission]]
+identifier = "allow-purchase-product"
+description = "Enables the purchase_product command without any pre-configured scope."
+commands.allow = ["purchase_product"]
+
+[[permission]]
+identifier = "deny-purchase-product"
+description = "Denies the purchase_product command without any pre-configured scope."
+commands.deny = ["purchase_product"]
