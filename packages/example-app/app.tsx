@@ -3,12 +3,11 @@ import { invoke } from '@tauri-apps/api/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { attachConsole } from '@tauri-apps/plugin-log';
-// import { ping, share } from '@inkibra/tauri-plugin-sharing';
 import { showContextMenu } from '@inkibra/tauri-plugin-context-menu';
 import { showMap } from '@inkibra/tauri-plugin-map-display';
 import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
 import { requestPermissions, checkPermissions, watchPosition, getCurrentPosition } from '@inkibra/tauri-plugin-geolocation';
-
+import { purchaseProduct, restorePurchases, fetchProducts } from '@inkibra/tauri-plugin-iap';
 
 
 function render() {
@@ -65,6 +64,18 @@ function render() {
         });
         console.log('watchId', watchId);
       }}>Watch Position</button>
+      <button onClick={async () => {
+        const products = await fetchProducts(['sub_example']);
+        console.log('products', products);
+      }}>Fetch Products</button>
+      <button onClick={async () => {
+        const purchaseResponse = await purchaseProduct('sub_example');
+        console.log('purchaseResponse', purchaseResponse);
+      }}>Purchase Product</button>
+      <button onClick={async () => {
+        const restorePurchasesResponse = await restorePurchases();
+        console.log('restorePurchasesResponse', restorePurchasesResponse);
+      }}>Restore Purchases</button>
     </React.StrictMode>,
   );
 }

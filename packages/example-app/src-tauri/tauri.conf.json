@@ -1,7 +1,7 @@
 {
   "productName": "inKibra Tauri Plugin Testbed",
   "version": "../package.json",
-  "identifier": "com.inkibra.tauri-plugin-sharing",
+  "identifier": "com.inkibra.tauri-plugin-testbed",
   "build": {
     "frontendDist": "../dist",
     "beforeDevCommand": "npm run build",

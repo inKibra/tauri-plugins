@@ -21,13 +21,13 @@ export interface RestoreResult {
 }
 
 export async function fetchProducts(productIds: string[]): Promise<Product[]> {
-  return invoke('plugin:iap|fetch_products', { productIds });
+  return await invoke('plugin:iap|fetch_products', { payload: { productIds } });
 }
 
 export async function purchaseProduct(productId: string): Promise<PurchaseResult> {
-  return invoke('plugin:iap|purchase_product', { productId });
+  return await invoke('plugin:iap|purchase_product', { payload: { productId } });
 }
 
 export async function restorePurchases(): Promise<RestoreResult> {
-  return invoke('plugin:iap|restore_purchases');
+  return await invoke('plugin:iap|restore_purchases');
 }
