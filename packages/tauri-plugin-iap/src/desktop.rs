@@ -14,14 +14,14 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct IAP<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> IAP<R> {
-  pub fn fetch_products(&self, _: FetchProductsArgs) -> crate::Result<Vec<Product>> {
+  pub fn fetch_products(&self, _: FetchProductsArgs) -> crate::Result<Vec<ProductInfo>> {
     Ok(vec![])
   }
 
   pub fn purchase_product(&self, _: PurchaseProductArgs) -> crate::Result<PurchaseResult> {
     Ok(PurchaseResult {
       success: false,
-      transaction_id: None,
+      product: None,
       error: Some("In-app purchases are not supported on desktop".into()),
     })
   }
@@ -29,7 +29,7 @@ impl<R: Runtime> IAP<R> {
   pub fn restore_purchases(&self) -> crate::Result<RestoreResult> {
     Ok(RestoreResult {
       success: false,
-      restored_product_ids: vec![],
+      restored_products: vec![],
       error: Some("In-app purchases are not supported on desktop".into()),
     })
   }

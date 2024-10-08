@@ -6,7 +6,7 @@ use crate::{models::*, Result, IAPExt};
 pub(crate) async fn fetch_products<R: Runtime>(
     app_handle: AppHandle<R>,
     payload: FetchProductsArgs,
-) -> Result<Vec<Product>> {
+) -> Result<Vec<ProductInfo>> {
     app_handle.iap().fetch_products(payload)
 }
 

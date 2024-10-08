@@ -21,7 +21,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct IAP<R: Runtime>(PluginHandle<R>);
 
 impl<R: Runtime> IAP<R> {
-  pub fn fetch_products(&self, payload: FetchProductsArgs) -> crate::Result<Vec<Product>> {
+  pub fn fetch_products(&self, payload: FetchProductsArgs) -> crate::Result<Vec<ProductInfo>> {
     self
       .0
       .run_mobile_plugin("fetchProducts", payload)

@@ -7,7 +7,7 @@
 
   ],
   "settings" : {
-    "_askToBuyEnabled" : true,
+    "_askToBuyEnabled" : false,
     "_failTransactionsEnabled" : false,
     "_locale" : "en_US",
     "_storefront" : "USA",

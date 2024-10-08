@@ -23,17 +23,24 @@ struct ProductInfo: Encodable {
     let priceLocale: String
 }
 
+// Structure for purchased/restored product information
+struct PurchasedProduct: Encodable {
+    let productId: String
+    let transactionId: String?
+    let originalTransactionId: String?
+}
+
 // Structure for purchase result
 struct PurchaseResult: Encodable {
     let success: Bool
-    let transactionId: String?
+    let product: PurchasedProduct?
     let error: String?
 }
 
 // Structure for restore purchases result
 struct RestoreResult: Encodable {
     let success: Bool
-    let restoredProductIds: [String]
+    let restoredProducts: [PurchasedProduct]
     let error: String?
 }
 
@@ -139,9 +146,14 @@ extension IAPPlugin: SKPaymentTransactionObserver {
             case .purchased, .restored:
                 // Handle successful purchase or restore
                 let productId = transaction.payment.productIdentifier
+                let purchasedProduct = PurchasedProduct(
+                    productId: productId,
+                    transactionId: transaction.transactionIdentifier,
+                    originalTransactionId: transaction.original?.transactionIdentifier
+                )
                 let result = PurchaseResult(
                     success: true,
-                    transactionId: transaction.transactionIdentifier,
+                    product: purchasedProduct,
                     error: nil
                 )
                 // Resolve the purchase invoke for this product
@@ -153,7 +165,7 @@ extension IAPPlugin: SKPaymentTransactionObserver {
                 let productId = transaction.payment.productIdentifier
                 let result = PurchaseResult(
                     success: false,
-                    transactionId: nil,
+                    product: nil,
                     error: transaction.error?.localizedDescription ?? "Unknown error"
                 )
                 // Resolve the purchase invoke for this product with the error
@@ -168,17 +180,23 @@ extension IAPPlugin: SKPaymentTransactionObserver {
             }
         }
     }
-    
+
     // Called when the restore purchases process completes successfully
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        // Collect the IDs of all restored products
-        let restoredProductIds = queue.transactions
+        // Collect the details of all restored products
+        let restoredProducts = queue.transactions
             .filter { $0.transactionState == .restored }
-            .compactMap { $0.payment.productIdentifier }
+            .map { transaction in
+                PurchasedProduct(
+                    productId: transaction.payment.productIdentifier,
+                    transactionId: transaction.transactionIdentifier,
+                    originalTransactionId: transaction.original?.transactionIdentifier
+                )
+            }
         
         let result = RestoreResult(
             success: true,
-            restoredProductIds: restoredProductIds,
+            restoredProducts: restoredProducts,
             error: nil
         )
         
@@ -191,7 +209,7 @@ extension IAPPlugin: SKPaymentTransactionObserver {
     func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
         let result = RestoreResult(
             success: false,
-            restoredProductIds: [],
+            restoredProducts: [],
             error: error.localizedDescription
         )
         

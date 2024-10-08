@@ -2,7 +2,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
-pub struct Product {
+pub struct ProductInfo {
     pub id: String,
     pub title: String,
     pub description: String,
@@ -12,9 +12,17 @@ pub struct Product {
 
 #[derive(Debug, Serialize, Deserialize)]
 #[serde(rename_all = "camelCase")]
+pub struct PurchasedProduct {
+    pub product_id: String,
+    pub transaction_id: Option<String>,
+    pub original_transaction_id: Option<String>,
+}
+
+#[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct PurchaseResult {
     pub success: bool,
-    pub transaction_id: Option<String>,
+    pub product: Option<PurchasedProduct>,
     pub error: Option<String>,
 }
 
@@ -22,7 +30,7 @@ pub struct PurchaseResult {
 #[serde(rename_all = "camelCase")]
 pub struct RestoreResult {
     pub success: bool,
-    pub restored_product_ids: Vec<String>,
+    pub restored_products: Vec<PurchasedProduct>,
     pub error: Option<String>,
 }
 

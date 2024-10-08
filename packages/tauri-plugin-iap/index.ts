@@ -1,6 +1,6 @@
 import { invoke } from '@tauri-apps/api/core'
 
-export interface Product {
+export type ProductInfo = {
   id: string;
   title: string;
   description: string;
@@ -8,19 +8,25 @@ export interface Product {
   priceLocale: string;
 }
 
-export interface PurchaseResult {
-  success: boolean;
-  transactionId: string | null;
-  error: string | null;
+export type PurchasedProduct = {
+  productId: string;
+  transactionId?: string;
+  originalTransactionId?: string;
 }
 
-export interface RestoreResult {
+export type PurchaseResult = {
   success: boolean;
-  restoredProductIds: string[];
-  error: string | null;
+  product?: PurchasedProduct;
+  error?: string;
 }
 
-export async function fetchProducts(productIds: string[]): Promise<Product[]> {
+export type RestoreResult = {
+  success: boolean;
+  restoredProducts: PurchasedProduct[];
+  error?: string;
+}
+
+export async function fetchProducts(productIds: string[]): Promise<ProductInfo[]> {
   return await invoke('plugin:iap|fetch_products', { payload: { productIds } });
 }
 
