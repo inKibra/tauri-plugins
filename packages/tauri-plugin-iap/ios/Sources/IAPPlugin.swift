@@ -149,7 +149,7 @@ extension IAPPlugin: SKPaymentTransactionObserver {
                 let purchasedProduct = PurchasedProduct(
                     productId: productId,
                     transactionId: transaction.transactionIdentifier,
-                    originalTransactionId: transaction.original?.transactionIdentifier
+                    originalTransactionId: transaction.original?.transactionIdentifier ?? transaction.transactionIdentifier
                 )
                 let result = PurchaseResult(
                     success: true,
