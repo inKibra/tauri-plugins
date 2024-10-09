@@ -15,6 +15,7 @@ pub fn run() {
         .plugin(tauri_plugin_haptic_feedback::init())
         .plugin(tauri_plugin_geolocation::init())
         .plugin(tauri_plugin_iap::init())
+        .plugin(tauri_plugin_auth::init())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

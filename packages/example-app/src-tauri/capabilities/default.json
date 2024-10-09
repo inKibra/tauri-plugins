@@ -12,6 +12,7 @@
     "map-display:default",
     "haptic-feedback:default",
     "geolocation:default",
-    "iap:default"
+    "iap:default",
+    "auth:default"
   ]
 }

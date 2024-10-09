@@ -42,6 +42,17 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Testing Geolocation</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.example.app</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>nk-tonetempo</string>
+			</array>
+		</dict>
+	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Testing Geolocation</string>
 </dict>
