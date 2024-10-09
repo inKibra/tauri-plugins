@@ -8,7 +8,7 @@ import { showMap } from '@inkibra/tauri-plugin-map-display';
 import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
 import { requestPermissions, checkPermissions, watchPosition, getCurrentPosition } from '@inkibra/tauri-plugin-geolocation';
 import { purchaseProduct, restorePurchases, fetchProducts } from '@inkibra/tauri-plugin-iap';
-
+import { authenticate } from '@inkibra/tauri-plugin-auth';
 
 function render() {
   const outlet = document.getElementById('inkibra-tauri-plugin-testbed-app-outlet');
@@ -76,6 +76,10 @@ function render() {
         const restorePurchasesResponse = await restorePurchases();
         console.log('restorePurchasesResponse', restorePurchasesResponse);
       }}>Restore Purchases</button>
+      <button onClick={async () => {
+        const authenticateResponse = await authenticate({authUrl: 'https://bradleat.inkibra.dev/tonetempo-auth-start', callbackScheme: 'nk-tonetempo'});
+        console.log('authenticateResponse', authenticateResponse);
+      }}>Authenticate</button>
     </React.StrictMode>,
   );
 }
