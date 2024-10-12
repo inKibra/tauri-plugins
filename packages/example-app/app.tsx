@@ -22,7 +22,7 @@ function render() {
         const selectedId = await showContextMenu([{
           title: 'Hello',
           id: 'hello',
-        }], 0, 0);
+        }]);
         console.log('selectedId', selectedId);
       }}>Show Context Menu</button>
       <button onClick={async () => {

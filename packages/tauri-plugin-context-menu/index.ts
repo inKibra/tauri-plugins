@@ -5,12 +5,10 @@ export type MenuItem = {
   id: string
 }
 
-export async function showContextMenu(items: MenuItem[], x: number, y: number): Promise<string | null> {
+export async function showContextMenu(items: MenuItem[]): Promise<string | null> {
   return await invoke<{selectedId?: string}>('plugin:context-menu|show_context_menu', {
     payload: {
       items,
-      x,
-      y,
     },
   }).then((r) => (r.selectedId ? r.selectedId : null));
 }

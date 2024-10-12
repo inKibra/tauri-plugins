@@ -14,7 +14,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct ContextMenu<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> ContextMenu<R> {
-  pub fn show_context_menu(&self, payload: ShowContextMenuRequest) -> crate::Result<ShowContextMenuResponse> {
+  pub fn show_context_menu(&self, _payload: ShowContextMenuRequest) -> crate::Result<ShowContextMenuResponse> {
     Ok(ShowContextMenuResponse {
       selected_id: None,
     })

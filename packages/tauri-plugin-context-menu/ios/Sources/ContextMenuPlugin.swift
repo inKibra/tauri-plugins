@@ -5,8 +5,6 @@ import WebKit
 
 class ContextMenuArgs: Decodable {
   let items: [MenuItem]
-  let x: CGFloat
-  let y: CGFloat
 }
 
 struct MenuItem: Decodable {
@@ -39,7 +37,6 @@ class ContextMenuPlugin: Plugin {
       
       if let popoverController = alertController.popoverPresentationController {
         popoverController.sourceView = viewController.view
-        popoverController.sourceRect = CGRect(x: args.x, y: args.y, width: 0, height: 0)
         popoverController.permittedArrowDirections = []
       }
       

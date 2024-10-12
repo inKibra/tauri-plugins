@@ -11,8 +11,6 @@ pub struct MenuItem {
 #[serde(rename_all = "camelCase")]
 pub struct ShowContextMenuRequest {
     pub items: Vec<MenuItem>,
-    pub x: f32,
-    pub y: f32,
 }
 
 #[derive(Debug, Clone, Deserialize, Serialize)]
