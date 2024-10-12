@@ -1,6 +1,6 @@
 {
   "name": "@inkibra/tauri-plugin-geolocation",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1",
   "author": "You",
   "description": "",
   "type": "module",
