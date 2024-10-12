@@ -6,7 +6,7 @@ Default permissions for the plugin
 - `allow-show-map`
 - `allow-hide-map`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

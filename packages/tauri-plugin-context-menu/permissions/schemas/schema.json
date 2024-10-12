@@ -295,25 +295,19 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-show-context-menu -> Enables the show_context_menu command without any pre-configured scope.",
+          "description": "Enables the show_context_menu command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-show-context-menu"
-          ]
+          "const": "allow-show-context-menu"
         },
         {
-          "description": "deny-show-context-menu -> Denies the show_context_menu command without any pre-configured scope.",
+          "description": "Denies the show_context_menu command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-show-context-menu"
-          ]
+          "const": "deny-show-context-menu"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

@@ -4,7 +4,7 @@ Default permissions for the plugin
 
 - `allow-authenticate`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

@@ -5,7 +5,7 @@ Default permissions for the plugin
 - `allow-ping`
 - `allow-share`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

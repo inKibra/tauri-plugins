@@ -6,7 +6,7 @@ Default permissions for the plugin
 - `allow-purchase-product`
 - `allow-restore-purchases`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

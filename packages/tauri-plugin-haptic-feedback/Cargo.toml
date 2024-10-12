@@ -9,9 +9,9 @@ exclude = ["/examples", "/webview-dist", "/webview-src", "/node_modules"]
 links = "tauri-plugin-haptic-feedback"
 
 [dependencies]
-tauri = { version = "2.0.0-rc.10" }
+tauri = { version = "2.0.0" }
 serde = "1.0"
 thiserror = "1.0"
 
 [build-dependencies]
-tauri-plugin = { version = "2.0.0-rc.9", features = ["build"] }
+tauri-plugin = { version = "2.0.0", features = ["build"] }

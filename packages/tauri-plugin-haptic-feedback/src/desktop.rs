@@ -14,15 +14,15 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
 pub struct HapticFeedback<R: Runtime>(AppHandle<R>);
 
 impl<R: Runtime> HapticFeedback<R> {
-  pub fn vibrate(&self, payload: HapticVibrateRequest) -> crate::Result<HapticResponse> {
-    Ok(HapticResponse)
+  pub fn vibrate(&self, _payload: HapticVibrateRequest) -> crate::Result<HapticResponse> {
+    Ok(HapticResponse { success: true })
   }
 
-  pub fn impact_feedback(&self, payload: ImpactFeedbackRequest) -> crate::Result<HapticResponse> {
-    Ok(HapticResponse)
+  pub fn impact_feedback(&self, _payload: ImpactFeedbackRequest) -> crate::Result<HapticResponse> {
+    Ok(HapticResponse { success: true })
   }
 
   pub fn selection_feedback(&self) -> crate::Result<HapticResponse> {
-    Ok(HapticResponse)
+    Ok(HapticResponse { success: true })
   }
 }

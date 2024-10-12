@@ -4,7 +4,7 @@ Default permissions for the plugin
 
 - `allow-show-context-menu`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

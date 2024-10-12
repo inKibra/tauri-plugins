@@ -6,7 +6,7 @@ Default permissions for the plugin
 - `allow-impact-feedback`
 - `allow-selection-feedback`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

@@ -295,39 +295,29 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-ping -> Enables the ping command without any pre-configured scope.",
+          "description": "Enables the ping command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-ping"
-          ]
+          "const": "allow-ping"
         },
         {
-          "description": "deny-ping -> Denies the ping command without any pre-configured scope.",
+          "description": "Denies the ping command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-ping"
-          ]
+          "const": "deny-ping"
         },
         {
-          "description": "allow-share -> Enables the share command without any pre-configured scope.",
+          "description": "Enables the share command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-share"
-          ]
+          "const": "allow-share"
         },
         {
-          "description": "deny-share -> Denies the share command without any pre-configured scope.",
+          "description": "Denies the share command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-share"
-          ]
+          "const": "deny-share"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

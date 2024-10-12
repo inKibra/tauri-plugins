@@ -295,53 +295,39 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-fetch-products -> Enables the fetch_products command without any pre-configured scope.",
+          "description": "Enables the fetch_products command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-fetch-products"
-          ]
+          "const": "allow-fetch-products"
         },
         {
-          "description": "deny-fetch-products -> Denies the fetch_products command without any pre-configured scope.",
+          "description": "Denies the fetch_products command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-fetch-products"
-          ]
+          "const": "deny-fetch-products"
         },
         {
-          "description": "allow-purchase-product -> Enables the purchase_product command without any pre-configured scope.",
+          "description": "Enables the purchase_product command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-purchase-product"
-          ]
+          "const": "allow-purchase-product"
         },
         {
-          "description": "deny-purchase-product -> Denies the purchase_product command without any pre-configured scope.",
+          "description": "Denies the purchase_product command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-purchase-product"
-          ]
+          "const": "deny-purchase-product"
         },
         {
-          "description": "allow-restore-purchases -> Enables the restore_purchases command without any pre-configured scope.",
+          "description": "Enables the restore_purchases command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-restore-purchases"
-          ]
+          "const": "allow-restore-purchases"
         },
         {
-          "description": "deny-restore-purchases -> Denies the restore_purchases command without any pre-configured scope.",
+          "description": "Denies the restore_purchases command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-restore-purchases"
-          ]
+          "const": "deny-restore-purchases"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

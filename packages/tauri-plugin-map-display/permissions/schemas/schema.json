@@ -295,53 +295,39 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-hide-map -> Enables the hide_map command without any pre-configured scope.",
+          "description": "Enables the hide_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-hide-map"
-          ]
+          "const": "allow-hide-map"
         },
         {
-          "description": "deny-hide-map -> Denies the hide_map command without any pre-configured scope.",
+          "description": "Denies the hide_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-hide-map"
-          ]
+          "const": "deny-hide-map"
         },
         {
-          "description": "allow-set-region -> Enables the set_region command without any pre-configured scope.",
+          "description": "Enables the set_region command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-set-region"
-          ]
+          "const": "allow-set-region"
         },
         {
-          "description": "deny-set-region -> Denies the set_region command without any pre-configured scope.",
+          "description": "Denies the set_region command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-set-region"
-          ]
+          "const": "deny-set-region"
         },
         {
-          "description": "allow-show-map -> Enables the show_map command without any pre-configured scope.",
+          "description": "Enables the show_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-show-map"
-          ]
+          "const": "allow-show-map"
         },
         {
-          "description": "deny-show-map -> Denies the show_map command without any pre-configured scope.",
+          "description": "Denies the show_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-show-map"
-          ]
+          "const": "deny-show-map"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

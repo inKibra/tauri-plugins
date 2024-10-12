@@ -295,95 +295,69 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-hide-map -> Enables the hide_map command without any pre-configured scope.",
+          "description": "Enables the hide_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-hide-map"
-          ]
+          "const": "allow-hide-map"
         },
         {
-          "description": "deny-hide-map -> Denies the hide_map command without any pre-configured scope.",
+          "description": "Denies the hide_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-hide-map"
-          ]
+          "const": "deny-hide-map"
         },
         {
-          "description": "allow-impact-feedback -> Enables the impact_feedback command without any pre-configured scope.",
+          "description": "Enables the impact_feedback command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-impact-feedback"
-          ]
+          "const": "allow-impact-feedback"
         },
         {
-          "description": "deny-impact-feedback -> Denies the impact_feedback command without any pre-configured scope.",
+          "description": "Denies the impact_feedback command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-impact-feedback"
-          ]
+          "const": "deny-impact-feedback"
         },
         {
-          "description": "allow-selection-feedback -> Enables the selection_feedback command without any pre-configured scope.",
+          "description": "Enables the selection_feedback command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-selection-feedback"
-          ]
+          "const": "allow-selection-feedback"
         },
         {
-          "description": "deny-selection-feedback -> Denies the selection_feedback command without any pre-configured scope.",
+          "description": "Denies the selection_feedback command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-selection-feedback"
-          ]
+          "const": "deny-selection-feedback"
         },
         {
-          "description": "allow-set-region -> Enables the set_region command without any pre-configured scope.",
+          "description": "Enables the set_region command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-set-region"
-          ]
+          "const": "allow-set-region"
         },
         {
-          "description": "deny-set-region -> Denies the set_region command without any pre-configured scope.",
+          "description": "Denies the set_region command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-set-region"
-          ]
+          "const": "deny-set-region"
         },
         {
-          "description": "allow-show-map -> Enables the show_map command without any pre-configured scope.",
+          "description": "Enables the show_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-show-map"
-          ]
+          "const": "allow-show-map"
         },
         {
-          "description": "deny-show-map -> Denies the show_map command without any pre-configured scope.",
+          "description": "Denies the show_map command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-show-map"
-          ]
+          "const": "deny-show-map"
         },
         {
-          "description": "allow-vibrate -> Enables the vibrate command without any pre-configured scope.",
+          "description": "Enables the vibrate command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-vibrate"
-          ]
+          "const": "allow-vibrate"
         },
         {
-          "description": "deny-vibrate -> Denies the vibrate command without any pre-configured scope.",
+          "description": "Denies the vibrate command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-vibrate"
-          ]
+          "const": "deny-vibrate"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

@@ -295,25 +295,19 @@
       "type": "string",
       "oneOf": [
         {
-          "description": "allow-authenticate -> Enables the authenticate command without any pre-configured scope.",
+          "description": "Enables the authenticate command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "allow-authenticate"
-          ]
+          "const": "allow-authenticate"
         },
         {
-          "description": "deny-authenticate -> Denies the authenticate command without any pre-configured scope.",
+          "description": "Denies the authenticate command without any pre-configured scope.",
           "type": "string",
-          "enum": [
-            "deny-authenticate"
-          ]
+          "const": "deny-authenticate"
         },
         {
-          "description": "default -> Default permissions for the plugin",
+          "description": "Default permissions for the plugin",
           "type": "string",
-          "enum": [
-            "default"
-          ]
+          "const": "default"
         }
       ]
     }

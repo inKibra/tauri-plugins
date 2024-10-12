@@ -8,7 +8,7 @@ Default permissions for the plugin
 - `allow-watch-position`
 - `allow-get-current-position`
 
-## Permission Table 
+## Permission Table
 
 <table>
 <tr>

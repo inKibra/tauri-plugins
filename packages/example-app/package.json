@@ -5,6 +5,7 @@
   "description": "",
   "scripts": {
     "dev": "tauri ios dev --no-dev-server-wait",
+    "dev:xcode": "tauri ios dev --no-dev-server-wait --open",
     "open:ios-project": "open ./src-tauri/gen/apple/app.xcodeproj/",
     "open:ios-build": "open ./src-tauri/gen/apple/build/arm64/",
     "clean": "rm -rf ./.parcel-cache && rm -rf dist && rm -rf src-tauri/target && rm -rf build",
@@ -22,8 +23,8 @@
     "@inkibra/tauri-plugin-iap": "^0.2.0-alpha.0",
     "@inkibra/tauri-plugin-map-display": "^0.2.0-alpha.0",
     "@inkibra/tauri-plugin-sharing": "^0.2.0-alpha.0",
-    "@tauri-apps/api": "^2.0.0-rc.0",
-    "@tauri-apps/plugin-log": "^2.0.0-rc.1"
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-log": "^2.0.0"
   },
   "author": "",
   "license": "ISC"
