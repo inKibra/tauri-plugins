@@ -8,5 +8,6 @@ members = [
     "packages/tauri-plugin-haptic-feedback",
     "packages/tauri-plugin-geolocation",
     "packages/tauri-plugin-iap",
-    "packages/tauri-plugin-auth"
+    "packages/tauri-plugin-auth",
+    "packages/tauri-plugin-notifications"
 ]

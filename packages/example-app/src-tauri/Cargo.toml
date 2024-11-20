@@ -15,12 +15,15 @@ name = "app_lib"
 crate-type = ["staticlib", "cdylib", "lib"]
 
 [build-dependencies]
-tauri-build = { version = "2.0.1", features = [] }
+tauri-build = { version = "2.0.3", features = [] }
 
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "2.0.2", features = [] }
+tauri = { version = "2.1.1", features = [] }
+log = "0.4"
+tauri-plugin-log = { version = "2.0.2" }
+
 tauri-plugin-sharing = { path = "../../tauri-plugin-sharing" }
 tauri-plugin-context-menu = { path = "../../tauri-plugin-context-menu" }
 tauri-plugin-map-display = { path = "../../tauri-plugin-map-display" }
@@ -28,4 +31,4 @@ tauri-plugin-haptic-feedback = { path = "../../tauri-plugin-haptic-feedback" }
 tauri-plugin-geolocation = { path = "../../tauri-plugin-geolocation" }
 tauri-plugin-iap = { path = "../../tauri-plugin-iap" }
 tauri-plugin-auth = { path = "../../tauri-plugin-auth" }
-tauri-plugin-log = "2.0.0"
+tauri-plugin-notifications = { path = "../../tauri-plugin-notifications" }

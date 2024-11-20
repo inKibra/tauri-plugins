@@ -22,8 +22,9 @@
     "@inkibra/tauri-plugin-haptic-feedback": "^0.1.2-alpha.0",
     "@inkibra/tauri-plugin-iap": "^0.2.0",
     "@inkibra/tauri-plugin-map-display": "^0.2.0",
+    "@inkibra/tauri-plugin-notifications": "^0.1.0",
     "@inkibra/tauri-plugin-sharing": "^0.2.0",
-    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/api": "^2.1.1",
     "@tauri-apps/plugin-log": "^2.0.0"
   },
   "author": "",

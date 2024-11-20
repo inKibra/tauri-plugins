@@ -1,0 +1,9 @@
+[default]
+description = "Default permissions for the notifications plugin"
+permissions = [
+    "allow-check-permissions",
+    "allow-request-permissions",
+    "allow-check-registration-status",
+    "allow-register-for-remote-notifications",
+    "allow-watch-notifications"
+]

@@ -9,6 +9,7 @@ import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
 import { requestPermissions, checkPermissions, watchPosition, getCurrentPosition } from '@inkibra/tauri-plugin-geolocation';
 import { purchaseProduct, restorePurchases, fetchProducts } from '@inkibra/tauri-plugin-iap';
 import { authenticate } from '@inkibra/tauri-plugin-auth';
+import { checkRegistrationStatus, registerForRemoteNotifications, requestPermissions as requestNotificationsPermissions, checkPermissions as checkNotificationsPermissions, watchNotifications } from '@inkibra/tauri-plugin-notifications';
 
 function render() {
   const outlet = document.getElementById('inkibra-tauri-plugin-testbed-app-outlet');
@@ -80,6 +81,27 @@ function render() {
         const authenticateResponse = await authenticate({authUrl: 'https://bradleat.inkibra.dev/tonetempo-auth-start', callbackScheme: 'nk-tonetempo'});
         console.log('authenticateResponse', authenticateResponse);
       }}>Authenticate</button>
+      <button onClick={async () => {
+        const checkNotificationsPermissionsResponse = await checkNotificationsPermissions();
+        console.log('checkNotificationsPermissionsResponse', checkNotificationsPermissionsResponse);
+      }}>Check Notifications Permissions</button>
+      <button onClick={async () => {
+        const requestNotificationsPermissionsResponse = await requestNotificationsPermissions();
+        console.log('requestNotificationsPermissionsResponse', requestNotificationsPermissionsResponse);
+      }}>Request Notifications Permissions</button>
+      <button onClick={async () => {
+        const registerForRemoteNotificationsResponse = await registerForRemoteNotifications();
+        console.log('registerForRemoteNotificationsResponse', registerForRemoteNotificationsResponse);
+      }}>Register for Remote Notifications</button>
+      <button onClick={async () => {
+        const checkRegistrationStatusResponse = await checkRegistrationStatus();
+        console.log('checkRegistrationStatusResponse', checkRegistrationStatusResponse);
+      }}>Check Registration Status</button>
+      <button onClick={async () => {
+        await watchNotifications((event) => {
+          console.log('watchNotificationsResponse', event);
+        });
+      }}>Watch Notifications</button>
     </React.StrictMode>,
   );
 }
@@ -95,7 +117,6 @@ window.addEventListener('unhandledrejection', (event) => {
 });
 
 window.onload = async () => {
-  await attachConsole();
   console.log('Rust console attached.');
   console.log(await invoke('greet', { name: 'inKibra' }));
   render();

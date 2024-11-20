@@ -8,11 +8,13 @@
   "permissions": [
     "core:default",
     "sharing:default",
+    "log:default",
     "context-menu:default",
     "map-display:default",
     "haptic-feedback:default",
     "geolocation:default",
     "iap:default",
-    "auth:default"
+    "auth:default",
+    "notifications:default"
   ]
 }
