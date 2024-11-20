@@ -1,6 +1,6 @@
 {
   "name": "@inkibra/tauri-plugin-example-app",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "private": true,
   "description": "",
   "scripts": {
@@ -16,14 +16,14 @@
     "prepublishOnly": "npm run clean && npx tsc"
   },
   "dependencies": {
-    "@inkibra/tauri-plugin-auth": "^0.2.0",
-    "@inkibra/tauri-plugin-context-menu": "^0.1.1",
-    "@inkibra/tauri-plugin-geolocation": "^0.1.1",
-    "@inkibra/tauri-plugin-haptic-feedback": "^0.1.2-alpha.0",
-    "@inkibra/tauri-plugin-iap": "^0.2.0",
-    "@inkibra/tauri-plugin-map-display": "^0.2.0",
-    "@inkibra/tauri-plugin-notifications": "^0.1.0",
-    "@inkibra/tauri-plugin-sharing": "^0.2.0",
+    "@inkibra/tauri-plugin-auth": "^0.2.1",
+    "@inkibra/tauri-plugin-context-menu": "^0.1.2",
+    "@inkibra/tauri-plugin-geolocation": "^0.1.2",
+    "@inkibra/tauri-plugin-haptic-feedback": "^0.1.2",
+    "@inkibra/tauri-plugin-iap": "^0.2.1",
+    "@inkibra/tauri-plugin-map-display": "^0.2.1",
+    "@inkibra/tauri-plugin-notifications": "^0.1.1",
+    "@inkibra/tauri-plugin-sharing": "^0.2.1",
     "@tauri-apps/api": "^2.1.1",
     "@tauri-apps/plugin-log": "^2.0.0"
   },
