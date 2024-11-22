@@ -46,6 +46,32 @@ Denies the check_permissions command without any pre-configured scope.
 <tr>
 <td>
 
+`geolocation:allow-clear-all-watches`
+
+</td>
+<td>
+
+Enables the clear_all_watches command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`geolocation:deny-clear-all-watches`
+
+</td>
+<td>
+
+Denies the clear_all_watches command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
 `geolocation:allow-clear-permissions`
 
 </td>

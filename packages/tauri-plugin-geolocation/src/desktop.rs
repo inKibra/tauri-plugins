@@ -70,6 +70,10 @@ impl<R: Runtime> Geolocation<R> {
         Ok(())
     }
 
+    pub fn clear_all_watches(&self) -> crate::Result<()> {
+        Ok(())
+    }
+
     pub fn check_permissions(&self) -> crate::Result<PermissionStatus> {
         Ok(PermissionStatus::default())
     }

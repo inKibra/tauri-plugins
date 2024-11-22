@@ -6,6 +6,7 @@ const COMMANDS: &[&str] = &[
     "get_current_position",
     "watch_position",
     "clear_watch",
+    "clear_all_watches",
     "check_permissions",
     "request_permissions",
 ];

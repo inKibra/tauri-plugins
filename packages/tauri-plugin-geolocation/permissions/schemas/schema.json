@@ -305,6 +305,16 @@
           "const": "deny-check-permissions"
         },
         {
+          "description": "Enables the clear_all_watches command without any pre-configured scope.",
+          "type": "string",
+          "const": "allow-clear-all-watches"
+        },
+        {
+          "description": "Denies the clear_all_watches command without any pre-configured scope.",
+          "type": "string",
+          "const": "deny-clear-all-watches"
+        },
+        {
           "description": "Enables the clear_permissions command without any pre-configured scope.",
           "type": "string",
           "const": "allow-clear-permissions"

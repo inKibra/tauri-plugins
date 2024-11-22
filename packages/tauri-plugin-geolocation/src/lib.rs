@@ -66,6 +66,7 @@ pub fn init<R: Runtime>() -> TauriPlugin<R> {
             commands::get_current_position,
             commands::watch_position,
             commands::clear_watch,
+            commands::clear_all_watches,
             commands::check_permissions,
             commands::request_permissions
         ])

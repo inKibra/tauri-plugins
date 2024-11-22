@@ -125,6 +125,12 @@ class GeolocationPlugin: Plugin, CLLocationManagerDelegate {
     invoke.resolve()
   }
 
+  @objc public func clearAllWatches(_ invoke: Invoke) {
+    self.watcherChannels.removeAll()
+    self.stopUpdating()
+    invoke.resolve()
+  }
+
   @objc override public func checkPermissions(_ invoke: Invoke) {
     var status: String = ""
 

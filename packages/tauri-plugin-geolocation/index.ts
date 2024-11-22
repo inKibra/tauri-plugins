@@ -126,6 +126,10 @@ export async function clearWatch(channelId: number): Promise<void> {
   })
 }
 
+export async function clearAllWatches(): Promise<void> {
+  await invoke('plugin:geolocation|clear_all_watches')
+}
+
 export async function checkPermissions(): Promise<PermissionStatus> {
   return await checkPluginPermissions('geolocation')
 }

@@ -89,6 +89,12 @@ impl<R: Runtime> Geolocation<R> {
             .map_err(Into::into)
     }
 
+    pub fn clear_all_watches(&self) -> crate::Result<()> {
+        self.0
+            .run_mobile_plugin("clearAllWatches", ())
+            .map_err(Into::into)
+    }
+
     pub fn check_permissions(&self) -> crate::Result<PermissionStatus> {
         self.0
             .run_mobile_plugin("checkPermissions", ())

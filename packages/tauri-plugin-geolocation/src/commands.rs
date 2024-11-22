@@ -30,6 +30,11 @@ pub(crate) async fn clear_watch<R: Runtime>(app: AppHandle<R>, channel_id: u32) 
 }
 
 #[command]
+pub(crate) async fn clear_all_watches<R: Runtime>(app: AppHandle<R>) -> Result<()> {
+    app.geolocation().clear_all_watches()
+}
+
+#[command]
 pub(crate) async fn check_permissions<R: Runtime>(app: AppHandle<R>) -> Result<PermissionStatus> {
     app.geolocation().check_permissions()
 }
