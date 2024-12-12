@@ -15,7 +15,7 @@
     "@tauri-apps/api": "^2.1.1"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com",
+    "registry": "https://registry.npmjs.org",
     "access": "public"
   },
   "repository": {

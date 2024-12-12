@@ -5,6 +5,7 @@ Default permissions for the plugin
 - `allow-request-permissions`
 - `allow-check-permissions`
 - `allow-clear-watch`
+- `allow-clear-all-watches`
 - `allow-watch-position`
 - `allow-get-current-position`
 
