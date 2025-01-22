@@ -15,7 +15,7 @@ pub fn init<R: Runtime, C: DeserializeOwned>(
   api: PluginApi<R, C>,
 ) -> crate::Result<Sharing<R>> {
   #[cfg(target_os = "android")]
-  let handle = api.register_android_plugin("com.inkibra.tauri.plugin.sharing", "ExamplePlugin")?;
+  let handle = api.register_android_plugin("com.inkibra.tauri.plugin.sharing", "SharePlugin")?;
   #[cfg(target_os = "ios")]
   let handle = api.register_ios_plugin(init_plugin_sharing)?;
   Ok(Sharing(handle))
