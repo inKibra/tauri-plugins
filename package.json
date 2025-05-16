@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "git checkout -B release && git push --force --set-upstream origin release && npx lerna publish && git checkout main && git rebase release && git push"
+    "release": "git checkout -B release && git push --force --set-upstream origin release && npx lerna publish && npx lerna publish --registry=https://registry.npmjs.org && git checkout main && git rebase release && git push"
   },
   "author": "",
   "license": "ISC",

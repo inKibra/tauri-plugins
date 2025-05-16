@@ -2,7 +2,7 @@
 import { invoke } from '@tauri-apps/api/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { prepare, start, type UpdateInfo } from '@inkibra/tauri-plugin-ota';
+import { prepare, start } from '@inkibra/tauri-plugin-ota';
 
 
 
@@ -45,7 +45,5 @@ window.onload = async () => {
   console.log('Rust console attached.');
   console.log(await invoke('greet', { name: 'inKibra' }));
   render();
-  // console.log(await ping('Pong!'));
-  // console.log(await share('Check out ToneTempo on the App Store!', 'https://apps.apple.com/us/app/tonetempo/id6471622223'));
 };
 
