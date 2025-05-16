@@ -7,6 +7,7 @@
   ],
   "permissions": [
     "core:default",
+    "ota:default",
     "sharing:default",
     "log:default",
     "context-menu:default",

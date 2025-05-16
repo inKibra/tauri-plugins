@@ -2,6 +2,8 @@
 
 Default permissions for the notifications plugin
 
+#### This default permission set includes the following:
+
 - `allow-check-permissions`
 - `allow-request-permissions`
 - `allow-check-registration-status`

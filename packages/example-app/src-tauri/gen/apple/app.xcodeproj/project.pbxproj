@@ -233,7 +233,6 @@
 			outputPaths = (
 				"$(SRCROOT)/Externals/x86_64/${CONFIGURATION}/libapp.a",
 				"$(SRCROOT)/Externals/arm64/${CONFIGURATION}/libapp.a",
-				"$(SRCROOT)/Externals/arm64-sim/${CONFIGURATION}/libapp.a",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -280,7 +279,7 @@
 				);
 				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
 					"$(SDKROOT)/usr/lib/swift",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",
@@ -390,7 +389,7 @@
 				);
 				"LIBRARY_SEARCH_PATHS[arch=arm64-sim]" = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Externals/arm64-sim/$(CONFIGURATION)",
+					"$(PROJECT_DIR)/Externals/arm64/$(CONFIGURATION)",
 					"$(SDKROOT)/usr/lib/swift",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift/$(PLATFORM_NAME)",
 					"$(TOOLCHAIN_DIR)/usr/lib/swift-5.0/$(PLATFORM_NAME)",

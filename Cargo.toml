@@ -9,5 +9,6 @@ members = [
     "packages/tauri-plugin-geolocation",
     "packages/tauri-plugin-iap",
     "packages/tauri-plugin-auth",
-    "packages/tauri-plugin-notifications"
+    "packages/tauri-plugin-notifications",
+    "packages/tauri-plugin-ota"
 ]

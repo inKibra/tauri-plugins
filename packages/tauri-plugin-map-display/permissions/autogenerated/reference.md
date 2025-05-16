@@ -2,6 +2,8 @@
 
 Default permissions for the plugin
 
+#### This default permission set includes the following:
+
 - `allow-set-region`
 - `allow-show-map`
 - `allow-hide-map`

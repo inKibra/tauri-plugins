@@ -2,7 +2,6 @@
 import { invoke } from '@tauri-apps/api/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { attachConsole } from '@tauri-apps/plugin-log';
 import { showContextMenu } from '@inkibra/tauri-plugin-context-menu';
 import { showMap } from '@inkibra/tauri-plugin-map-display';
 import { impactFeedback } from '@inkibra/tauri-plugin-haptic-feedback';
@@ -10,6 +9,7 @@ import { requestPermissions, checkPermissions, watchPosition, getCurrentPosition
 import { purchaseProduct, restorePurchases, fetchProducts } from '@inkibra/tauri-plugin-iap';
 import { authenticate } from '@inkibra/tauri-plugin-auth';
 import { checkRegistrationStatus, registerForRemoteNotifications, requestPermissions as requestNotificationsPermissions, checkPermissions as checkNotificationsPermissions, watchNotifications } from '@inkibra/tauri-plugin-notifications';
+import { register } from '@inkibra/tauri-plugin-ota';
 
 function render() {
   const outlet = document.getElementById('inkibra-tauri-plugin-testbed-app-outlet');
@@ -116,11 +116,10 @@ window.addEventListener('unhandledrejection', (event) => {
   );
 });
 
-window.onload = async () => {
+
+
+register(async () => {
   console.log('Rust console attached.');
   console.log(await invoke('greet', { name: 'inKibra' }));
   render();
-  console.log('render() finished.');
-  // console.log(await ping('Pong!'));
-  // console.log(await share('Check out ToneTempo on the App Store!', 'https://apps.apple.com/us/app/tonetempo/id6471622223'));
-};
+});

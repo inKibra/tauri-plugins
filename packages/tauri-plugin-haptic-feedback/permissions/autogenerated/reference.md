@@ -2,6 +2,8 @@
 
 Default permissions for the plugin
 
+#### This default permission set includes the following:
+
 - `allow-vibrate`
 - `allow-impact-feedback`
 - `allow-selection-feedback`

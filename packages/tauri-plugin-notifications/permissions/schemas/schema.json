@@ -49,7 +49,7 @@
           "minimum": 1.0
         },
         "description": {
-          "description": "Human-readable description of what the permission does. Tauri convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+          "description": "Human-readable description of what the permission does. Tauri convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
           "type": [
             "string",
             "null"
@@ -111,7 +111,7 @@
           "type": "string"
         },
         "description": {
-          "description": "Human-readable description of what the permission does. Tauri internal convention is to use <h4> headings in markdown content for Tauri documentation generation purposes.",
+          "description": "Human-readable description of what the permission does. Tauri internal convention is to use `<h4>` headings in markdown content for Tauri documentation generation purposes.",
           "type": [
             "string",
             "null"
@@ -297,57 +297,68 @@
         {
           "description": "Enables the check_permissions command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-check-permissions"
+          "const": "allow-check-permissions",
+          "markdownDescription": "Enables the check_permissions command without any pre-configured scope."
         },
         {
           "description": "Denies the check_permissions command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-check-permissions"
+          "const": "deny-check-permissions",
+          "markdownDescription": "Denies the check_permissions command without any pre-configured scope."
         },
         {
           "description": "Enables the check_registration_status command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-check-registration-status"
+          "const": "allow-check-registration-status",
+          "markdownDescription": "Enables the check_registration_status command without any pre-configured scope."
         },
         {
           "description": "Denies the check_registration_status command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-check-registration-status"
+          "const": "deny-check-registration-status",
+          "markdownDescription": "Denies the check_registration_status command without any pre-configured scope."
         },
         {
           "description": "Enables the register_for_remote_notifications command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-register-for-remote-notifications"
+          "const": "allow-register-for-remote-notifications",
+          "markdownDescription": "Enables the register_for_remote_notifications command without any pre-configured scope."
         },
         {
           "description": "Denies the register_for_remote_notifications command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-register-for-remote-notifications"
+          "const": "deny-register-for-remote-notifications",
+          "markdownDescription": "Denies the register_for_remote_notifications command without any pre-configured scope."
         },
         {
           "description": "Enables the request_permissions command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-request-permissions"
+          "const": "allow-request-permissions",
+          "markdownDescription": "Enables the request_permissions command without any pre-configured scope."
         },
         {
           "description": "Denies the request_permissions command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-request-permissions"
+          "const": "deny-request-permissions",
+          "markdownDescription": "Denies the request_permissions command without any pre-configured scope."
         },
         {
           "description": "Enables the watch_notifications command without any pre-configured scope.",
           "type": "string",
-          "const": "allow-watch-notifications"
+          "const": "allow-watch-notifications",
+          "markdownDescription": "Enables the watch_notifications command without any pre-configured scope."
         },
         {
           "description": "Denies the watch_notifications command without any pre-configured scope.",
           "type": "string",
-          "const": "deny-watch-notifications"
+          "const": "deny-watch-notifications",
+          "markdownDescription": "Denies the watch_notifications command without any pre-configured scope."
         },
         {
-          "description": "Default permissions for the notifications plugin",
+          "description": "Default permissions for the notifications plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-check-registration-status`\n- `allow-register-for-remote-notifications`\n- `allow-watch-notifications`",
           "type": "string",
-          "const": "default"
+          "const": "default",
+          "markdownDescription": "Default permissions for the notifications plugin\n#### This default permission set includes:\n\n- `allow-check-permissions`\n- `allow-request-permissions`\n- `allow-check-registration-status`\n- `allow-register-for-remote-notifications`\n- `allow-watch-notifications`"
         }
       ]
     }

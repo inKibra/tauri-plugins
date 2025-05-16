@@ -1,0 +1,26 @@
+{
+  "name": "@inkibra/tauri-plugin-ota",
+  "version": "0.1.0",
+  "author": "You",
+  "description": "Tauri Plugin for Over-the-Air updates for iOS applications",
+  "license": "MIT",
+  "type": "module",
+  "main": "./build/index.js",
+  "types": "./index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run clean && npx tsc"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.5.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inkibra/tauri-plugins.git"
+  }
+}

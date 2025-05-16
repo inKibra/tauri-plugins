@@ -13,7 +13,7 @@
     "prepublishOnly": "npm run clean && npx tsc"
   },
   "dependencies": {
-    "@tauri-apps/api": "^2.1.1"
+    "@tauri-apps/api": "^2.5.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
