@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c0858b58-1113-4050-8ea2-fd03c7e53804" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../example-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../example-app/src-tauri/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../example-app/src-tauri/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-auth/src/mobile.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-auth/src/mobile.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-geolocation/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-geolocation/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-geolocation/android/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-geolocation/android/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-geolocation/android/src/main/java/GeolocationPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-geolocation/android/src/main/java/GeolocationPlugin.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-geolocation/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-geolocation/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tauri-plugin-geolocation/src/mobile.rs" beforeDir="false" afterPath="$PROJECT_DIR$/../tauri-plugin-geolocation/src/mobile.rs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/android">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/android/.tauri/tauri-api">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="android" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="android" type="f1a62948:ProjectNode" />
+                <item name="tauri-android" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="android" type="f1a62948:ProjectNode" />
+                <item name="tauri-android" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="android" type="f1a62948:ProjectNode" />
+                <item name="tauri-android" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2rJxIND5pVHuwCP7qr4WIg12nz2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nickstebb/Code/tauri-plugins/packages/tauri-plugin-geolocation&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c0858b58-1113-4050-8ea2-fd03c7e53804" name="Changes" comment="" />
+      <created>1736290898376</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736290898376</updated>
+    </task>
+    <servers />
+  </component>
+</project>
