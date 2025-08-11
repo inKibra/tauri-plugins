@@ -79,24 +79,24 @@ impl<R: Runtime> UpdateManager<R> {
         manager
     }
 
-    // Get the resource directory where updates are stored
-    fn get_resource_dir(&self) -> PathBuf {
-        self.app_handle.path().resource_dir().unwrap()
+    // Get the cache directory where updates are stored
+    fn get_storage_dir(&self) -> PathBuf {
+        self.app_handle.path().app_cache_dir().unwrap()
     }
 
     // Get the path to store version info
     fn get_version_file_path(&self) -> PathBuf {
-        self.get_resource_dir().join("current-version.txt")
+        self.get_storage_dir().join("current-version.txt")
     }
 
     // Get the path for storing manifest
     fn get_manifest_path(&self, version: &str) -> PathBuf {
-        self.get_resource_dir().join(format!("manifest-{}.json", version))
+        self.get_storage_dir().join(format!("manifest-{}.json", version))
     }
 
     // Get the path for storing the update content
     fn get_update_content_path(&self, version: &str) -> PathBuf {
-        self.get_resource_dir().join(format!("update-content-{}.js", version))
+        self.get_storage_dir().join(format!("update-content-{}.js", version))
     }
 
     // Load the current version from storage

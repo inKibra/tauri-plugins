@@ -20,6 +20,15 @@ Enables sharing content from your Tauri application on iOS platforms.
 
 Provides APIs for displaying and interacting with maps in Tauri applications on iOS.
 
+### 5. [Push Notifications Plugin](packages/tauri-plugin-notifications/README.md)
+
+Handles push notifications in Tauri applications for iOS platforms, allowing you to send and receive notifications.
+
+### 6. [OTA Updates Plugin](packages/tauri-plugin-ota/README.md)
+
+Provides over-the-air updates for Tauri applications, enabling you to update your app without requiring users to download a new version from the App Store.
+
+
 ## Installation
 
 Each plugin can be installed separately. Please refer to the individual plugin READMEs for specific installation instructions.
