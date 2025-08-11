@@ -33,26 +33,6 @@ Provides over-the-air updates for Tauri applications, enabling you to update you
 
 Each plugin can be installed separately. Please refer to the individual plugin READMEs for specific installation instructions.
 
-## General Setup
-
-Before installing any of the plugins, you need to configure npm to use the GitHub Packages registry for the `@inkibra` scope:
-
-```sh
-npm config set @inkibra:registry https://npm.pkg.github.com
-```
-
-For yarn users:
-
-```sh
-yarn config set @inkibra:registry https://npm.pkg.github.com
-```
-
-For pnpm users:
-
-```sh
-pnpm config set @inkibra:registry https://npm.pkg.github.com
-```
-
 ## Usage
 
 Each plugin has its own usage instructions. Please refer to the individual plugin READMEs for detailed usage examples and API documentation.

@@ -15,17 +15,7 @@ tauri-plugin-notifications = { git = "https://github.com/inkibra/tauri-plugins",
 
 ### Install JavaScript Guest Bindings
 
-Before installing the JavaScript bindings, configure npm to use the GitHub Packages registry:
-
-```sh
-npm config set @inkibra:registry https://npm.pkg.github.com
-# or
-yarn config set @inkibra:registry https://npm.pkg.github.com
-# or
-pnpm config set @inkibra:registry https://npm.pkg.github.com
-```
-
-Then install the JavaScript bindings:
+Install the JavaScript bindings:
 
 ```sh
 npm add @inkibra/tauri-plugin-notifications

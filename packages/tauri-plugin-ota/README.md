@@ -15,25 +15,7 @@ tauri-plugin-ota = { git = "https://github.com/inkibra/tauri-plugins", tag = "@i
 
 ### Install JavaScript Guest Bindings
 
-Before installing the JavaScript bindings, you need to configure npm to use the GitHub Packages registry for the `@inkibra` scope. Run the following command:
-
-```sh
-npm config set @inkibra:registry https://npm.pkg.github.com
-```
-
-For yarn users:
-
-```sh
-yarn config set @inkibra:registry https://npm.pkg.github.com
-```
-
-For pnpm users:
-
-```sh
-pnpm config set @inkibra:registry https://npm.pkg.github.com
-```
-
-After setting the registry, you can install the JavaScript Guest bindings using your preferred JavaScript package manager:
+You can install the JavaScript Guest bindings using your preferred JavaScript package manager:
 
 ```sh
 npm add @inkibra/tauri-plugin-ota
