@@ -61,6 +61,7 @@ struct WatchNotificationResult: Encodable {
 class NotificationsPlugin: Plugin, UNUserNotificationCenterDelegate {
     private var registrationInvoke: Invoke?
     private var notificationChannels: [Channel] = []
+    private var originalDelegate: UIApplicationDelegate?
     
     override init() {
         super.init()
@@ -80,6 +81,8 @@ class NotificationsPlugin: Plugin, UNUserNotificationCenterDelegate {
                 name: NSNotification.Name("UIApplicationDidReceiveRemoteNotification"),
                 object: nil
             )
+
+            self.originalDelegate = app.delegate
             app.delegate = self
         } else {
             Logger.error("NotificationsPlugin: Failed to get shared application")
@@ -388,6 +391,50 @@ extension NotificationsPlugin: UIApplicationDelegate {
             self.registrationInvoke?.resolve(result)
             self.registrationInvoke = nil
         }
+    }
+
+    /*
+    Proxy all application delegate methods to the original delegate:
+      sel!(application:didFinishLaunchingWithOptions:),
+      sel!(application:openURL:options:),
+      sel!(application:continue:restorationHandler:),
+      sel!(applicationDidBecomeActive:),
+      sel!(applicationWillResignActive:),
+      sel!(applicationWillEnterForeground:),
+      sel!(applicationDidEnterBackground:),
+      sel!(applicationWillTerminate:),
+    */
+
+    public func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        self.originalDelegate?.application?(application, didFinishLaunchingWithOptions: launchOptions) ?? false
+    }
+
+    public func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        self.originalDelegate?.application?(application, open: url, options: options) ?? false
+    }
+
+    public func application(_ application: UIApplication, continue continueUserActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        self.originalDelegate?.application?(application, continue: continueUserActivity, restorationHandler: restorationHandler) ?? false
+    }
+
+    public func applicationDidBecomeActive(_ application: UIApplication) {
+        self.originalDelegate?.applicationDidBecomeActive?(application)
+    }
+
+    public func applicationWillResignActive(_ application: UIApplication) {
+        self.originalDelegate?.applicationWillResignActive?(application)
+    }
+
+    public func applicationWillEnterForeground(_ application: UIApplication) {
+        self.originalDelegate?.applicationWillEnterForeground?(application)
+    }
+
+    public func applicationDidEnterBackground(_ application: UIApplication) {
+        self.originalDelegate?.applicationDidEnterBackground?(application)
+    }
+
+    public func applicationWillTerminate(_ application: UIApplication) {
+        self.originalDelegate?.applicationWillTerminate?(application)
     }
 }
 
